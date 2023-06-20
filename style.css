@@ -1,0 +1,271 @@
+/* style.css */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+    background-color: #2F3133;
+  }
+  
+  h1, h2 {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos do cabeçalho */
+  header {
+    background-color: #151719; /* Altere para um tom de verde claro de sua preferência */
+  padding: 20px;
+    
+    color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 2.1pc;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Estilos da seção inicial */
+  #home {
+    background-color: #292c2e;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #home h2 {
+    margin-top: 0;
+  }
+  /* Estilos dos containers */
+.container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Estilos do conteúdo dentro dos containers */
+  .content p {
+    margin-bottom: 10px;
+  }
+/* Estilos dos contêineres */
+.container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Estilos do conteúdo à esquerda */
+  .content-left {
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos do conteúdo à direita */
+  .content-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  /* Estilos do formulário */
+  .content-right form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilos dos rótulos do formulário */
+  .content-right form label {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos dos campos de entrada do formulário */
+  .content-right form input {
+    margin-bottom: 10px;
+  }
+/* Estilos do título da seção */
+.section-title {
+    margin-bottom: 10px;
+  }
+      
+  
+  .cta {
+    display: inline-block;
+    background-color: rgba(59, 54, 54, 0.5);
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  /* Estilos das seções */
+  section {
+    padding: 40px 20px;
+    background-color: #2F3133;
+    color: #f7f7f7;
+  }
+  
+  /* Estilos do formulário de contato */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilos do rodapé */
+  footer {
+    background-color: #1a1919;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+  /* Estilos dos botões de acordeão */
+.accordion-button {
+    background-color: #64dd34;
+    color: #52db5d;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #9af587;
+    cursor: pointer;
+  }
+  
+  /* Estilos do conteúdo oculto */
+  .accordion-content {
+    display: none;
+  }
+  
+  /* Estilo para o botão ativo */
+  .accordion-content.active {
+    display: block;
+  }
+  
+  /* Estilo para mostrar o conteúdo ao expandir */
+  .accordion-content.active {
+    display: block;
+  }
+  #home {
+    position: relative;
+  }
+
+  #home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('Como-comecar-a-fazer-compostagem-em-casa.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+  }
+
+  #home .content {
+    position: relative;
+    z-index: 1;
+  }
+  #community {
+    position: relative;
+  }
+  
+  #community::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('aprece-associacao-dos-municipios-do-estado-do-ceara_1051.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+  }
+  
+  #community .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #community .content-left p {
+    margin-bottom: 10px; /* Ajuste a margem conforme necessário */
+  }
+  
+  #calculate {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2pc;
+    
+  }
+  
+  
+  
+  #calculate .container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #calculate .content-left p {
+    margin-bottom: 10px;
+  }
+  
+  /* Adicione outros estilos conforme necessário */
+  
+  
+  

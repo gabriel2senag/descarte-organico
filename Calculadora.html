@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Economia de Efeito Estufa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      width: 200px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              
+                <div class="navigation">
+                  <nav>
+                    <ul class="nav">
+                      
+                      <li class="nav-item"><a a class="nav-link" href="index.html">Pagina Inicial</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <h1>Calculadora de Economia do Efeito Estufa </h1>
+              
+            </div>
+          </div>
+        </div>
+      </header>
+      
+
+
+      <section id="calculate">
+        <label for="weight">Peso de Lixo Orgânico (em quilogramas):</label>
+        <input type="number" id="weight" placeholder="Digite o peso do lixo orgânico" onclick="event.stopPropagation()">
+      
+        <button onclick="calculate()">Calcular</button>
+      
+        <div id="result"></div>
+      </section>
+      
+      <script>
+        function calculate() {
+          var weight = parseFloat(document.getElementById('weight').value);
+          var gasEmissionsPerKg = 0.9; // Estimativa média de gases de efeito estufa por kg de lixo orgânico compostado
+      
+          if (isNaN(weight) || weight <= 0) {
+            document.getElementById('result').innerHTML = 'Por favor, digite um valor válido para o peso.';
+          } else {
+            var gasEmissionsSaved = (weight * gasEmissionsPerKg).toFixed(2);
+            document.getElementById('result').innerHTML = 'Aproximadamente ' + gasEmissionsSaved + ' kg de gases de efeito estufa foram economizados com a compostagem do lixo orgânico.';
+            
+            // Dados das emissões provenientes do consumo de combustível da empresa
+            var organicWastePerDay = 1; // kg de lixo orgânico por dia
+            var biogasPerTon = 250; // m³ de biogás gerados por tonelada de resíduo orgânico
+            var biometanePerM3 = 1.25; // kWh de energia gerados por 1 m³ de biometano
+            
+            var biogasGenerated = (weight / 1000) * biogasPerTon; // Conversão de toneladas para quilogramas
+            var biometaneGenerated = biogasGenerated * biometanePerM3;
+            var energyConsumed = 5; // kWh consumidos por dia
+            
+            var energySaved = energyConsumed - biometaneGenerated;
+            
+            document.getElementById('result').innerHTML += '<br><br>';
+            document.getElementById('result').innerHTML += 'A quantidade de energia economizada com a compostagem do lixo orgânico é de aproximadamente ' + energySaved.toFixed(2) + ' kWh por dia.';
+          }
+        }
+      </script>
+      
+      
+      
+      
+</body>
+</html>
